@@ -10,6 +10,7 @@ import MarvelsApiCore
 
 protocol ApiProviderProtocol: AnyObject {
     static func make() -> ApiProvider
+    func fetchData(with value: String, callback: @escaping (Result<[HeroModel], TMError>) -> Void)
 }
 
 public final class ApiProvider: ApiProviderProtocol {
