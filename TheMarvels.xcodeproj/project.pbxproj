@@ -16,6 +16,10 @@
 		0A1259AA29E82B7A00BF0FFC /* TheMarvelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1259A929E82B7A00BF0FFC /* TheMarvelsTests.swift */; };
 		0A1259B429E82B7A00BF0FFC /* TheMarvelsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1259B329E82B7A00BF0FFC /* TheMarvelsUITests.swift */; };
 		0A1259B629E82B7A00BF0FFC /* TheMarvelsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1259B529E82B7A00BF0FFC /* TheMarvelsUITestsLaunchTests.swift */; };
+		0A4460D329E874610034F575 /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4460D229E874610034F575 /* ApiProvider.swift */; };
+		0A4460D629E876D50034F575 /* TMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4460D529E876D50034F575 /* TMError.swift */; };
+		0A4460D829E878960034F575 /* HeroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4460D729E878960034F575 /* HeroModel.swift */; };
+		0A76E9BD29E86AB200BFAA47 /* MarvelsApiCore in Frameworks */ = {isa = PBXBuildFile; productRef = 0A76E9BC29E86AB200BFAA47 /* MarvelsApiCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,9 @@
 		0A1259AF29E82B7A00BF0FFC /* TheMarvelsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMarvelsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A1259B329E82B7A00BF0FFC /* TheMarvelsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMarvelsUITests.swift; sourceTree = "<group>"; };
 		0A1259B529E82B7A00BF0FFC /* TheMarvelsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMarvelsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0A4460D229E874610034F575 /* ApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		0A4460D529E876D50034F575 /* TMError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMError.swift; sourceTree = "<group>"; };
+		0A4460D729E878960034F575 /* HeroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A76E9BD29E86AB200BFAA47 /* MarvelsApiCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +115,9 @@
 		0A12599129E82B7900BF0FFC /* TheMarvels */ = {
 			isa = PBXGroup;
 			children = (
+				0A4460D929E87CE70034F575 /* feat */,
+				0A4460D429E876BA0034F575 /* model */,
+				0A4460D129E8744D0034F575 /* provider */,
 				0A0087B329E833450035993E /* coordinator */,
 				0A12599229E82B7900BF0FFC /* AppDelegate.swift */,
 				0A12599429E82B7900BF0FFC /* SceneDelegate.swift */,
@@ -135,6 +146,30 @@
 			path = TheMarvelsUITests;
 			sourceTree = "<group>";
 		};
+		0A4460D129E8744D0034F575 /* provider */ = {
+			isa = PBXGroup;
+			children = (
+				0A4460D229E874610034F575 /* ApiProvider.swift */,
+			);
+			path = provider;
+			sourceTree = "<group>";
+		};
+		0A4460D429E876BA0034F575 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				0A4460D529E876D50034F575 /* TMError.swift */,
+				0A4460D729E878960034F575 /* HeroModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		0A4460D929E87CE70034F575 /* feat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = feat;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +186,9 @@
 			dependencies = (
 			);
 			name = TheMarvels;
+			packageProductDependencies = (
+				0A76E9BC29E86AB200BFAA47 /* MarvelsApiCore */,
+			);
 			productName = TheMarvels;
 			productReference = 0A12598F29E82B7900BF0FFC /* TheMarvels.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +261,9 @@
 				Base,
 			);
 			mainGroup = 0A12598629E82B7800BF0FFC;
+			packageReferences = (
+				0A76E9BB29E86AB200BFAA47 /* XCRemoteSwiftPackageReference "MarvelsApiCore" */,
+			);
 			productRefGroup = 0A12599029E82B7900BF0FFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,7 +307,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A12599729E82B7900BF0FFC /* ViewController.swift in Sources */,
+				0A4460D629E876D50034F575 /* TMError.swift in Sources */,
 				0A0087B529E833610035993E /* MainCoordinator.swift in Sources */,
+				0A4460D329E874610034F575 /* ApiProvider.swift in Sources */,
+				0A4460D829E878960034F575 /* HeroModel.swift in Sources */,
 				0A12599329E82B7900BF0FFC /* AppDelegate.swift in Sources */,
 				0A12599529E82B7900BF0FFC /* SceneDelegate.swift in Sources */,
 			);
@@ -598,6 +642,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0A76E9BB29E86AB200BFAA47 /* XCRemoteSwiftPackageReference "MarvelsApiCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jcleilton/MarvelsApiCore";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A76E9BC29E86AB200BFAA47 /* MarvelsApiCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A76E9BB29E86AB200BFAA47 /* XCRemoteSwiftPackageReference "MarvelsApiCore" */;
+			productName = MarvelsApiCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0A12598729E82B7800BF0FFC /* Project object */;
 }
