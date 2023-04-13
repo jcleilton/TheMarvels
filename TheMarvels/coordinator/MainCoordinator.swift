@@ -16,7 +16,7 @@ final class MainCoordinator {
     }
     
     func start() {
-        let controller = ViewController()
+        let controller = ListViewController()
         window.rootViewController = controller
         window.makeKeyAndVisible()
     }

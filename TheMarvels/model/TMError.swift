@@ -20,17 +20,22 @@ public enum TMError: Error {
     public var localizedDescription: String {
         switch self {
         case .noData:
-            return "Sem dados"
+            return ErrorKind.noData.localizedDescription
+            
         case .requestError:
-            return "Erro na requisição"
+            return ErrorKind.requestError.localizedDescription
+            
         case .invalidURL:
-            return "URL inválida"
+            return ErrorKind.invalidURL.localizedDescription
+            
         case .noInternet:
-            return "Sem internet"
+            return ErrorKind.noInternet.localizedDescription
+            
         case .unauthorizate:
-            return "Acesso negado"
+            return ErrorKind.unauthorizate.localizedDescription
+            
         case .invalidJSON:
-            return "Erro na conversão dos dados"
+            return ErrorKind.invalidJSON.localizedDescription
         }
     }
     
