@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "marvelsapicore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jcleilton/MarvelsApiCore",
+      "state" : {
+        "revision" : "af657549af1f327f4df13bf3fe596ecccd9564fe",
+        "version" : "0.0.3"
+      }
+    }
+  ],
+  "version" : 2
+}
